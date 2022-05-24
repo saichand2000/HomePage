@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/home/saichand/html/health-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<title>Health</title>
+</head>
+<body class="box">
+    <div class="box-1">
+        <img src="/home/saichand/Downloads/Photos/menu.png"><br>
+        <!-- <img src="/home/saichand/Downloads/Photos/suit.png"> -->
+        <img src="/home/saichand/Downloads/Photos/chart.png">
+        <img src="/home/saichand/Downloads/Photos/map.png">
+        <img src="/home/saichand/Downloads/Photos/settings.png">
+
+
+    </div>
+
+    <div class="box-2">
+        <div class="monitor">
+            <!-- first half -->
+            <div class="b2-monitor-heading">
+
+                <div class="heading-1">
+                    <h2> Monitor health of your business</h2>
+                    <p>Control and analuze your data in the easiest way</p>
+                </div> 
+                <div class="heading-2">
+                    <div class="search">
+                        <!-- <p>search </p> -->
+                        <!-- <label>Search</label> -->
+                        <input type="text" placeholder="search"><br>
+                        <img src="/home/saichand/Downloads/Photos/calender.png">
+                        
+                    </div>
+                    <div class="week">
+                        <div class="w1"> Week</div>
+                        <div class="w2"> Month</div>
+                        <div class="w3"> Year</div>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="b2-monitor-box">
+                <!-- <p>boxs</p> -->
+                <div class="m1"> Views 
+                    <img src="/home/saichand/Downloads/Photos/views.png">
+                  <p>32</p>
+                 
+                </div>
+                <div class="m2"> Clients
+                    <img src="/home/saichand/Downloads/Photos/profile.png">
+                    <p>63</p>
+                </div>
+                <div class="m3"> purchases
+                    <img src="/home/saichand/Downloads/Photos/tick.png">
+                    <p>10</p>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="total">
+            <!-- <p>total</p> -->
+
+            <h2>Total Profit</h2>
+            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+
+            <script>
+            var xValues = [];
+            var yValues = [];
+            generateData("Math.sin(x)", 0, 10, 0.5);
+            
+            new Chart("myChart", {
+              type: "line",
+              data: {
+                labels: xValues,
+                datasets: [{
+                  fill: false,
+                  pointRadius: 2,
+                  borderColor: "rgba(0,0,255,0.5)",
+                  data: yValues
+                }]
+              },    
+              options: {
+                legend: {display: false},
+                title: {
+                  display: true,
+             
+                  fontSize: 20
+                }
+              }
+            });
+            function generateData(value, i1, i2, step = 1) {
+              for (let x = i1; x <= i2; x += step) {
+                yValues.push(eval(value));
+                xValues.push(x);
+              }
+            }
+            </script>
+            
+
+
+
+
+
+
+
+
+
+
+
+            <!--  -->
+        </div>
+    </div>
+
+    <div class="box-3">
+        <div class="b3-one">
+            <img src="/home/saichand/Downloads/Photos/windmills.png">
+        </div>
+        
+        <div class="b3-two">
+            <div class="b3-nav">
+                <div class="n1"> Objects</div>
+                <div class="n2"> Realtors</div>
+            </div>
+            <div class="b3-list">
+                    <div class="l1"> 
+                        <div><img src="/home/saichand/Downloads/Photos/windmills.png"></div>
+                        <div id="b3-text">Windmills Loft</div>  
+                    </div>
+                    <div class="l2">
+                        <div><img src="/home/saichand/Downloads/Photos/1.jpg"></div>
+                        <div id="b3-text">Sea View villa</div>  
+                    </div>
+                    <div class="l3">
+                        <div><img src="/home/saichand/Downloads/Photos/2.jpg"></div>
+                        <div id="b3-text">Family Villa</div>  
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
